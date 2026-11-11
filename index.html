@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI/ML student portfolio" />
+  <title>Your Name | AI/ML Portfolio</title>
+  <style>
+    :root { --bg:#0b1020; --panel:#141c31; --text:#edf2ff; --muted:#aab6d3; --accent:#78a9ff; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,Segoe UI,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .wrap { width:min(1000px, 92%); margin:auto; }
+    header { padding:22px 0; border-bottom:1px solid #26314c; }
+    nav { display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; align-items:center; }
+    nav strong { letter-spacing:.4px; }
+    nav div { display:flex; gap:18px; flex-wrap:wrap; }
+    .hero { padding:78px 0 58px; }
+    .tag { color:var(--accent); font-weight:700; letter-spacing:1.5px; text-transform:uppercase; font-size:.78rem; }
+    h1 { font-size:clamp(2.2rem,6vw,4.2rem); line-height:1.1; margin:14px 0; }
+    h2 { font-size:1.7rem; margin:0 0 18px; }
+    p { color:var(--muted); }
+    .lead { max-width:700px; font-size:1.12rem; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:25px; }
+    .btn { display:inline-block; padding:10px 17px; border-radius:9px; border:1px solid #3a4a6e; }
+    .primary { background:var(--accent); color:#081226; border-color:var(--accent); font-weight:700; }
+    section { padding:38px 0; border-top:1px solid #26314c; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; }
+    .card { background:var(--panel); border:1px solid #293653; border-radius:14px; padding:20px; }
+    .card h3 { margin:0 0 8px; }
+    .pill { display:inline-block; background:#202d49; color:#dce7ff; padding:5px 10px; margin:5px 5px 0 0; border-radius:20px; font-size:.9rem; }
+    footer { padding:30px 0 45px; color:var(--muted); }
+    @media(max-width:600px){ .hero{padding:55px 0 40px;} nav{align-items:flex-start;} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <strong>YOUR NAME / AI·ML</strong>
+        <div>
+          <a href="#about">About</a><a href="#skills">Skills</a>
+          <a href="#projects">Projects</a><a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <div class="tag">M.Tech student · Artificial Intelligence & Machine Learning</div>
+      <h1>Learning to build<br>useful AI solutions.</h1>
+      <p class="lead">I am an M.Tech student focused on Artificial Intelligence and Machine Learning. I am strengthening my foundations in Python, data handling and machine learning through coursework and hands-on practice.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">View learning projects</a>
+        <a class="btn" href="#contact">Contact me</a>
+      </div>
+    </div>
+
+    <section id="about">
+      <h2>About me</h2>
+      <p>I have completed a B.Tech in Electronics and Telecommunication Engineering and am currently pursuing an M.Tech in AI/ML. My current focus is building strong programming and machine-learning fundamentals, then applying them to practical projects.</p>
+      <p><strong>Education:</strong> M.Tech in AI/ML — [Institute name, expected graduation year]<br>
+      <strong>Previous education:</strong> B.Tech in ENTC — [College name, graduation year]</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills & current learning</h2>
+      <div class="card">
+        <span class="pill">Python fundamentals</span>
+        <span class="pill">NumPy</span>
+        <span class="pill">Machine Learning fundamentals</span>
+        <span class="pill">Scikit-learn (learning)</span>
+        <span class="pill">Jupyter Notebook</span>
+        <span class="pill">VS Code</span>
+        <p style="margin-bottom:0">Add a skill only when you can explain and demonstrate it. Update this section as you gain experience.</p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects & practice</h2>
+      <p>I am currently developing my project portfolio. The cards below are placeholders—replace them with real work before sharing this portfolio with recruiters.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>Project 1 — [Project title]</h3>
+          <p>[Problem you are solving, dataset used, model/approach, and result. Add only after completing the project.]</p>
+          <a href="#" aria-label="Add GitHub project link">GitHub link to be added</a>
+        </article>
+        <article class="card">
+          <h3>Project 2 — [Project title]</h3>
+          <p>[Briefly explain what you built, tools used, and what you learned.]</p>
+          <a href="#" aria-label="Add GitHub project link">GitHub link to be added</a>
+        </article>
+        <article class="card">
+          <h3>Coursework & practice</h3>
+          <p>[Add selected notebooks or assignments that you can explain clearly.]</p>
+          <a href="#" aria-label="Add GitHub repository link">Repository link to be added</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">Add your LinkedIn profile URL</a></p>
+      <p>GitHub: <a href="https://github.com/" target="_blank" rel="noreferrer">Add your GitHub profile URL</a></p>
+    </section>
+  </main>
+
+  <footer><div class="wrap">© <span id="year"></span> Your Name · AI/ML Portfolio</div></footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
