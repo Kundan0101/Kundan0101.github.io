@@ -1,115 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AI/ML student portfolio" />
-  <title>Your Name | AI/ML Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kundan Kumar — M.Tech student in Artificial Intelligence and Machine Learning.">
+  <title>Kundan Kumar | AI/ML Portfolio</title>
   <style>
-    :root { --bg:#0b1020; --panel:#141c31; --text:#edf2ff; --muted:#aab6d3; --accent:#78a9ff; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; font-family:Inter,Segoe UI,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
-    a { color:var(--accent); text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    .wrap { width:min(1000px, 92%); margin:auto; }
-    header { padding:22px 0; border-bottom:1px solid #26314c; }
-    nav { display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; align-items:center; }
-    nav strong { letter-spacing:.4px; }
-    nav div { display:flex; gap:18px; flex-wrap:wrap; }
-    .hero { padding:78px 0 58px; }
-    .tag { color:var(--accent); font-weight:700; letter-spacing:1.5px; text-transform:uppercase; font-size:.78rem; }
-    h1 { font-size:clamp(2.2rem,6vw,4.2rem); line-height:1.1; margin:14px 0; }
-    h2 { font-size:1.7rem; margin:0 0 18px; }
-    p { color:var(--muted); }
-    .lead { max-width:700px; font-size:1.12rem; }
-    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:25px; }
-    .btn { display:inline-block; padding:10px 17px; border-radius:9px; border:1px solid #3a4a6e; }
-    .primary { background:var(--accent); color:#081226; border-color:var(--accent); font-weight:700; }
-    section { padding:38px 0; border-top:1px solid #26314c; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; }
-    .card { background:var(--panel); border:1px solid #293653; border-radius:14px; padding:20px; }
-    .card h3 { margin:0 0 8px; }
-    .pill { display:inline-block; background:#202d49; color:#dce7ff; padding:5px 10px; margin:5px 5px 0 0; border-radius:20px; font-size:.9rem; }
-    footer { padding:30px 0 45px; color:var(--muted); }
-    @media(max-width:600px){ .hero{padding:55px 0 40px;} nav{align-items:flex-start;} }
+    :root {
+      --bg: #0b1020; --surface: #131c31; --surface-2: #192641;
+      --text: #edf3ff; --muted: #aebbd4; --accent: #83b5ff;
+      --border: #2a3a59; --green: #8ce0bd;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--text); background:
+        radial-gradient(ellipse at 85% 5%, rgba(75,125,220,.17), transparent 34%),
+        var(--bg);
+      font: 16px/1.7 Inter, "Segoe UI", Arial, sans-serif;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { width: min(1040px, 91%); margin: 0 auto; }
+    header { position: sticky; top: 0; z-index: 5; background: rgba(11,16,32,.92); border-bottom: 1px solid var(--border); backdrop-filter: blur(12px); }
+    nav { min-height: 68px; display: flex; justify-content: space-between; align-items: center; gap: 18px; }
+    .brand { color: var(--text); font-weight: 750; letter-spacing: .3px; }
+    nav .links { display: flex; gap: 20px; flex-wrap: wrap; }
+    nav .links a { color: var(--muted); font-size: .93rem; }
+    .hero { padding: 92px 0 72px; }
+    .eyebrow { color: var(--green); text-transform: uppercase; letter-spacing: 2px; font-size: .78rem; font-weight: 750; }
+    h1 { font-size: clamp(2.6rem, 7vw, 5rem); line-height: 1.06; letter-spacing: -2px; margin: 16px 0; }
+    h1 span { color: var(--accent); }
+    .intro { color: var(--muted); font-size: 1.15rem; max-width: 720px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .button { display: inline-block; border: 1px solid var(--border); border-radius: 10px; padding: 10px 17px; color: var(--text); font-weight: 650; }
+    .button.primary { background: var(--accent); border-color: var(--accent); color: #091326; }
+    section { padding: 42px 0; border-top: 1px solid var(--border); }
+    h2 { font-size: 1.8rem; margin: 0 0 18px; }
+    h3 { margin: 0 0 8px; }
+    .muted { color: var(--muted); }
+    .panel { background: linear-gradient(145deg, var(--surface), #10192b); border: 1px solid var(--border); border-radius: 16px; padding: 22px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+    .tag { display: inline-block; margin: 5px 6px 0 0; padding: 6px 11px; border-radius: 99px; background: var(--surface-2); border: 1px solid var(--border); color: #dce8ff; font-size: .9rem; }
+    .status { display: inline-block; color: var(--green); background: rgba(140,224,189,.09); border: 1px solid rgba(140,224,189,.3); border-radius: 99px; padding: 3px 9px; font-size: .78rem; font-weight: 700; }
+    .project { min-height: 190px; }
+    footer { padding: 32px 0 48px; color: var(--muted); font-size: .9rem; }
+    @media (max-width: 650px) {
+      nav { align-items: flex-start; flex-direction: column; padding: 14px 0; }
+      nav .links { gap: 12px; }
+      .hero { padding: 65px 0 50px; }
+      h1 { letter-spacing: -1px; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="wrap">
-      <nav>
-        <strong>YOUR NAME / AI·ML</strong>
-        <div>
-          <a href="#about">About</a><a href="#skills">Skills</a>
-          <a href="#projects">Projects</a><a href="#contact">Contact</a>
-        </div>
-      </nav>
-    </div>
+    <nav class="container" aria-label="Main navigation">
+      <a class="brand" href="#home">KUNDAN KUMAR</a>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
   </header>
 
-  <main class="wrap">
-    <div class="hero">
-      <div class="tag">M.Tech student · Artificial Intelligence & Machine Learning</div>
-      <h1>Learning to build<br>useful AI solutions.</h1>
-      <p class="lead">I am an M.Tech student focused on Artificial Intelligence and Machine Learning. I am strengthening my foundations in Python, data handling and machine learning through coursework and hands-on practice.</p>
+  <main class="container">
+    <section class="hero" id="home" style="border:0">
+      <div class="eyebrow">M.Tech Student · Artificial Intelligence & Machine Learning</div>
+      <h1>Hi, I'm <span>Kundan Kumar.</span></h1>
+      <p class="intro">
+        I am pursuing an M.Tech in Artificial Intelligence and Machine Learning at
+        Bharti Vidyapeeth, Pune. I am building my skills in Python, data analysis,
+        machine learning and deep learning, and developing practical projects as I learn.
+      </p>
       <div class="actions">
-        <a class="btn primary" href="#projects">View learning projects</a>
-        <a class="btn" href="#contact">Contact me</a>
+        <a class="button primary" href="#projects">Explore my projects</a>
+        <a class="button" href="https://www.linkedin.com/in/kundan-kumar-46706923b/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
       </div>
-    </div>
+    </section>
 
     <section id="about">
-      <h2>About me</h2>
-      <p>I have completed a B.Tech in Electronics and Telecommunication Engineering and am currently pursuing an M.Tech in AI/ML. My current focus is building strong programming and machine-learning fundamentals, then applying them to practical projects.</p>
-      <p><strong>Education:</strong> M.Tech in AI/ML — [Institute name, expected graduation year]<br>
-      <strong>Previous education:</strong> B.Tech in ENTC — [College name, graduation year]</p>
+      <h2>About Me</h2>
+      <div class="panel">
+        <p class="muted" style="margin:0">
+          I am an AI/ML postgraduate student interested in understanding how intelligent
+          systems are built and applied to real-world problems. I am currently strengthening
+          my programming, data-handling and model-building foundations through coursework
+          and hands-on practice. I value clear problem-solving, continuous learning and
+          writing projects that I can explain and improve.
+        </p>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="panel">
+        <span class="status">Currently pursuing</span>
+        <h3 style="margin-top:12px">M.Tech in Artificial Intelligence and Machine Learning</h3>
+        <p class="muted" style="margin-bottom:0">Bharti Vidyapeeth, Pune</p>
+      </div>
     </section>
 
     <section id="skills">
-      <h2>Skills & current learning</h2>
-      <div class="card">
-        <span class="pill">Python fundamentals</span>
-        <span class="pill">NumPy</span>
-        <span class="pill">Machine Learning fundamentals</span>
-        <span class="pill">Scikit-learn (learning)</span>
-        <span class="pill">Jupyter Notebook</span>
-        <span class="pill">VS Code</span>
-        <p style="margin-bottom:0">Add a skill only when you can explain and demonstrate it. Update this section as you gain experience.</p>
+      <h2>Technical Skills</h2>
+      <p class="muted">Skills and tools I am studying and practising:</p>
+      <div class="panel">
+        <span class="tag">Python</span>
+        <span class="tag">NumPy</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Deep Learning</span>
+        <span class="tag">Scikit-learn</span>
       </div>
     </section>
 
     <section id="projects">
-      <h2>Projects & practice</h2>
-      <p>I am currently developing my project portfolio. The cards below are placeholders—replace them with real work before sharing this portfolio with recruiters.</p>
+      <h2>Projects</h2>
+      <p class="muted">I am currently learning and developing my project portfolio. These sections are placeholders and will be updated when each project is completed.</p>
       <div class="grid">
-        <article class="card">
-          <h3>Project 1 — [Project title]</h3>
-          <p>[Problem you are solving, dataset used, model/approach, and result. Add only after completing the project.]</p>
-          <a href="#" aria-label="Add GitHub project link">GitHub link to be added</a>
+        <article class="panel project">
+          <span class="status">In progress</span>
+          <h3 style="margin-top:12px">AI/ML Project 1</h3>
+          <p class="muted">Project topic, dataset, approach, results and source-code link will be added here after implementation.</p>
         </article>
-        <article class="card">
-          <h3>Project 2 — [Project title]</h3>
-          <p>[Briefly explain what you built, tools used, and what you learned.]</p>
-          <a href="#" aria-label="Add GitHub project link">GitHub link to be added</a>
+        <article class="panel project">
+          <span class="status">Planned</span>
+          <h3 style="margin-top:12px">AI/ML Project 2</h3>
+          <p class="muted">This section will describe a future project, the problem it addresses and the techniques used.</p>
         </article>
-        <article class="card">
-          <h3>Coursework & practice</h3>
-          <p>[Add selected notebooks or assignments that you can explain clearly.]</p>
-          <a href="#" aria-label="Add GitHub repository link">Repository link to be added</a>
+        <article class="panel project">
+          <span class="status">Planned</span>
+          <h3 style="margin-top:12px">Deep Learning Project</h3>
+          <p class="muted">Details and a repository link will be added after the project is built and tested.</p>
         </article>
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">Add your LinkedIn profile URL</a></p>
-      <p>GitHub: <a href="https://github.com/" target="_blank" rel="noreferrer">Add your GitHub profile URL</a></p>
+      <div class="panel">
+        <p class="muted">I am happy to connect about learning opportunities, AI/ML projects and internships.</p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kundan-kumar-46706923b/" target="_blank" rel="noopener noreferrer">linkedin.com/in/kundan-kumar-46706923b</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Kundan0101" target="_blank" rel="noopener noreferrer">github.com/Kundan0101</a></p>
+        <p class="muted" style="margin-bottom:0"><strong>Email:</strong> Add your professional email when you are ready to publish it.</p>
+      </div>
     </section>
   </main>
 
-  <footer><div class="wrap">© <span id="year"></span> Your Name · AI/ML Portfolio</div></footer>
+  <footer><div class="container">© <span id="year"></span> Kundan Kumar · AI/ML Portfolio</div></footer>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
